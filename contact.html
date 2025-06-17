@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reach Out Now - Book Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Bebas Neue', sans-serif;
+      padding: 20px;
+    }
+
+    .title-section {
+      text-align: center;
+      padding: 30px 20px 0px;
+    }
+
+    .title-section h1 {
+      color: white;
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .title-section h2 {
+      color: red;
+      font-size: 24px;
+      margin: 10px 0 10px;
+    }
+
+    section {
+      padding: 20px 20px 40px;
+    }
+
+    .reach-out-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .reach-out-form input,
+    .reach-out-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #333;
+      border-radius: 5px;
+      color: white;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #ccc;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .reach-out-form textarea {
+      height: 150px;
+    }
+
+    .reach-out-form button {
+      padding: 12px 30px;
+      background-color: black;
+      color: red;
+      border: 2px solid red;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .reach-out-form button:hover {
+      background-color: red;
+      color: black;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .title-section h1 {
+        font-size: 36px;
+      }
+
+      .title-section h2 {
+        font-size: 18px;
+      }
+
+      .reach-out-form {
+        padding: 20px;
+      }
+
+      .reach-out-form button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-section">
+    <h1>Hit Me Up!</h1>
+    <h2>Book Your Coaching Session</h2>
+  </div>
+
+  <section>
+    <div class="reach-out-form">
+      <form id="bookingForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+        <label for="message">Booking Request:</label>
+        <textarea id="message" name="message" required placeholder="Hit me up with your fitness goals or message"></textarea>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      alert(`Thank you ${name}! Your booking request has been received. We'll contact you at ${email} soon.`);
+      bookingForm.reset();
+    });
+  </script>
+
+</body>
+</html>

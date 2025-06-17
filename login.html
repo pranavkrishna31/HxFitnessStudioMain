@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - H9 Fitness Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Bebas Neue', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: red;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .glow-text {
+      font-size: 1.5rem;
+      color: white;
+      text-shadow: 0 0 8px white;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #444;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .login-container input::placeholder {
+      color: #ccc;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: black;
+      color: red;
+      border: 2px solid red;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .login-container button:hover {
+      background-color: red;
+      color: black;
+    }
+
+    .error {
+      color: crimson;
+      font-size: 0.9rem;
+      margin-top: -5px;
+      margin-bottom: 10px;
+    }
+
+    /* ✅ Responsive styles for small screens */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      .glow-text {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .login-container {
+        padding: 20px;
+      }
+
+      .login-container input,
+      .login-container button {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>H9 Fitness Studio</h1>
+  <div class="glow-text">Welcome Back!</div>
+
+  <div class="login-container">
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username or Email" required />
+      <div id="emailError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Password" required />
+      <div id="passwordError" class="error"></div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    form.addEventListener('submit', function (e) {
+      emailError.textContent = "";
+      passwordError.textContent = "";
+
+      let valid = true;
+      const emailText = username.value.trim();
+      const passwordText = password.value.trim();
+
+      if (emailText.includes("@")) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailText)) {
+          emailError.textContent = "Enter a valid email format.";
+          valid = false;
+        }
+      }
+
+      const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+      if (passwordText.length < 6 || !specialCharPattern.test(passwordText)) {
+        passwordError.textContent = "Password must be 6+ characters and include a special character.";
+        valid = false;
+      }
+
+      if (!valid) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>

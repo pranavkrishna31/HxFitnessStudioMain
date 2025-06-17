@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Programs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    h1 {
+      color: red;
+      text-align: center;
+      font-size: 48px;
+      padding: 20px 20px 0;
+    }
+
+    p{
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      border-top: 1px solid #333;
+    }
+
+    .day-title {
+      color: red;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: left;
+      text-shadow: 0 0 5px red;
+    }
+
+    .muscle-groups {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .group {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .group h3 {
+      color: red;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .group ul {
+      padding-left: 20px;
+      list-style-type: square;
+    }
+
+    .group ul li {
+      margin-bottom: 5px;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .day-title {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .muscle-groups {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .group {
+        min-width: unset;
+      }
+
+      .group h3 {
+        text-align: center;
+      }
+
+      .group ul {
+        padding-left: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Basic Workout Programs</h1>
+  <p>NOTE- Sample only</p>
+
+  <!-- All the same section content below... -->
+
+  <!-- POWERBUILDING (6-DAY) -->
+  <section><div class="day-title">PowerBuilding - Monday: Chest & Rear Delts</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Chest</h3>
+        <ul><li>Bench Press</li><li>Incline DB Press</li><li>Machine Press</li></ul>
+        <h3>Rear Delts</h3>
+        <ul><li>Reverse Pec Deck</li><li>Archer Pulls</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">PowerBuilding - Tuesday: Deadlift & Back</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Back</h3>
+        <ul><li>Deadlift</li><li>Lat Pulldown</li><li>Rowing</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">PowerBuilding - Wednesday: Quads, Core</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Quads</h3>
+        <ul><li>Back Squat</li><li>Leg Press</li><li>Leg Extensions</li></ul>
+        <h3>Core</h3>
+        <ul><li>Cable Side Bends</li><li>Kneeling Crunches</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">PowerBuilding - Thursday: Shoulders & Chest</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Shoulders</h3>
+        <ul><li>OHP</li><li>Lateral Raises</li><li>Reverse Flyes</li></ul>
+        <h3>Chest</h3>
+        <ul><li>Incline DB Press</li><li>Cable Flyes</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">PowerBuilding - Friday: Hamstrings & Arms</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Hamstrings</h3>
+        <ul><li>RDL</li><li>Hamstring Curls</li></ul>
+        <h3>Biceps & Triceps</h3>
+        <ul><li>Preacher Curls</li><li>Overhead Extensions</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">PowerBuilding - Saturday: Back & Abs</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Back</h3>
+        <ul><li>Pullovers</li><li>Rows</li></ul>
+        <h3>Abs</h3>
+        <ul><li>Crunches</li><li>Leg Raises</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- POWERLIFTING (5-DAY) -->
+  <section><div class="day-title">Powerlifting - Monday: Squat Focus</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Lower Body</h3>
+        <ul><li>Back Squat - 5x5</li><li>Pause Squat</li><li>Leg Press</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Powerlifting - Tuesday: Bench Focus</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Upper Body</h3>
+        <ul><li>Bench Press - 5x5</li><li>Close-Grip Bench</li><li>Dips</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Powerlifting - Thursday: Deadlift Focus</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Posterior Chain</h3>
+        <ul><li>Deadlift - 5x5</li><li>Barbell Rows</li><li>Hamstring Curls</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Powerlifting - Friday: Overhead Press</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Shoulders & Arms</h3>
+        <ul><li>OHP</li><li>Lateral Raises</li><li>Barbell Curls</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Powerlifting - Saturday: Volume & Assistance</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Full Body</h3>
+        <ul><li>Front Squats</li><li>Incline Press</li><li>Pull-ups</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODYBUILDING (6-DAY) -->
+  <section><div class="day-title">Bodybuilding - Monday: Push</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Chest, Shoulders, Triceps</h3>
+        <ul><li>Incline Bench</li><li>DB Press</li><li>Lateral Raises</li><li>Pushdowns</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Bodybuilding - Tuesday: Pull</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Back & Biceps</h3>
+        <ul><li>Barbell Rows</li><li>Lat Pulldown</li><li>Preacher Curls</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Bodybuilding - Wednesday: Legs</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Legs</h3>
+        <ul><li>Squats</li><li>Leg Curls</li><li>Calf Raises</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Bodybuilding - Thursday: Shoulders & Arms</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Shoulders, Biceps, Triceps</h3>
+        <ul><li>OHP</li><li>DB Curls</li><li>Skullcrushers</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Bodybuilding - Friday: Upper Body</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Chest & Back</h3>
+        <ul><li>Incline DB Press</li><li>Pull-ups</li><li>Rows</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="day-title">Bodybuilding - Saturday: Lower Body</div>
+    <div class="muscle-groups">
+      <div class="group">
+        <h3>Legs & Glutes</h3>
+        <ul><li>Front Squats</li><li>Glute Bridges</li><li>Leg Extensions</li></ul>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
